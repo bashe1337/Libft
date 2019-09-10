@@ -6,11 +6,11 @@ int main()
 	//memset
 	
 	unsigned char src[15] = "0123456789";
-	memset(src, '2', 10);
+	bzero(src, 10);
 	printf("memset sys: %s\n", src);
 
 	ft_memset(src, '2', 10);
-	printf("memset my: %s\n", src);
+	printf("memset my1: %s\n", src);
 
 	//strlen
 	
@@ -66,9 +66,20 @@ int main()
 	printf("strch sys: %ld\n", (ach - chrstr + 1));
 
 	//ft_atoi
-	char testat[] = "12q3";
+	char testat[] = "\e475";
 	printf("atoi sys: %d\n", atoi(testat));
 	printf("atoi mys: %d\n", ft_atoi(testat));
 
+	//memcpy
+	unsigned char src1337[10]="123456";
+	
+	// Массив приемник данных
+	unsigned char dst1337[10]="";
+
+	// Копируем 6 байт из массива src в массив dst
+	memcpy (dst1337, src1337, 6);
+
+	// Вывод массива dst на консоль
+	printf ("dst: %s\n",dst1337);
 	return (0);
 }
