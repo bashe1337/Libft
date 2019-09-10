@@ -5,12 +5,12 @@ int main()
 {
 	//memset
 	
-	unsigned char src[15] = "1234567890";
-	memset(src, '1', 10);
+	unsigned char src[15] = "0123456789";
+	memset(src, '2', 10);
 	printf("memset sys: %s\n", src);
 
-	/*ft_memset(src, '2', 10);
-	printf("memset my:", src);*/
+	ft_memset(src, '2', 10);
+	printf("memset my: %s\n", src);
 
 	//strlen
 	
@@ -47,7 +47,7 @@ int main()
 	printf("strncpy my: %hu\n", (unsigned short)cpyndst2);*/
 
 	//strcat
-	char catapp[40] = "First l\0ine";
+	char catapp[40] = "First line";
 	char catdst[40] = "Second line";
 	ft_strcat(catdst, catapp);
 	printf("strcat my: %s\n", catdst);
@@ -55,8 +55,20 @@ int main()
 	//strncat
 	char catnapp[20] = "0123456789";
 	char catndst[40] = "000";
-	ft_strncat(catndst, catnapp, 23);
+	ft_strncat(catndst, catnapp, 3);
 	printf("strncat my: %s\n", catndst);
+
+	//strchr
+	char chrstr[] = "01232456789";
+	int chrch = '6';
+	char *ach;
+	ach = strchr(chrstr, chrch);
+	printf("strch sys: %ld\n", (ach - chrstr + 1));
+
+	//ft_atoi
+	char testat[] = "12q3";
+	printf("atoi sys: %d\n", atoi(testat));
+	printf("atoi mys: %d\n", ft_atoi(testat));
 
 	return (0);
 }

@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 18:48:40 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/09 18:35:11 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/09 19:50:56 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/09 20:10:20 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+int		ft_atoi(const char *str)
 {
-	int			i;
-	char		*str;
-	int			count;
+	int		i;
+	int		r;
+	int		m;
 
 	i = 0;
-	count = ft_strlen(src);
-	str = malloc(sizeof(char) * count);
-	if (str == NULL)
-		return (NULL);
-	while (i < count)
+	r = 0;
+	m = 1;
+	while ((str[i] >= 9 && str[i] <= 12) || str[i] == 32)
+		i++;
+	if (str[i] == '-')
 	{
-		str[i] = src[i];
+		m = -1;
 		i++;
 	}
-	str[i + 1] = '\0';
-	return (str);
+	if (str[i] == '+')
+		i++;
+	while (str[i])
+	{
+		if (str[i] >= 48 && str[i] <= 57)
+			r = r * 10 + (str[i] - 48);
+		else
+			break ;
+		i++;
+	}
+	return (r * m);
 }

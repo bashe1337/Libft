@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 18:48:40 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/09 18:35:11 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/09 19:44:34 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/09 20:07:04 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	ft_strstr(const char *haystack, const char *needle)
 {
-	int			i;
-	char		*str;
-	int			count;
-
-	i = 0;
-	count = ft_strlen(src);
-	str = malloc(sizeof(char) * count);
-	if (str == NULL)
-		return (NULL);
-	while (i < count)
-	{
-		str[i] = src[i];
-		i++;
-	}
-	str[i + 1] = '\0';
-	return (str);
+	
 }

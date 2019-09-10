@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 18:48:40 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/09 18:35:11 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/09 19:47:31 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/09 20:07:06 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	int			i;
-	char		*str;
-	int			count;
-
-	i = 0;
-	count = ft_strlen(src);
-	str = malloc(sizeof(char) * count);
-	if (str == NULL)
-		return (NULL);
-	while (i < count)
-	{
-		str[i] = src[i];
-		i++;
-	}
-	str[i + 1] = '\0';
-	return (str);
+	
 }
