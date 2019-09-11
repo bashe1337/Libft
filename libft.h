@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 21:07:57 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/10 20:32:40 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/11 20:44:57 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ int				ft_atoi(const char *str);
 void			*ft_memset(void *destination, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
+void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
+char			*ft_strdup(const char *src);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bashe <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 17:05:40 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/07 19:01:54 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/11 21:10:35 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	size_t	i;
 
 	i = 0;
-	while (i < len && src[i])
+	while (i < len && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	
 	return (dst);
 }

@@ -20,12 +20,12 @@ int main()
 
 	//strdup
 	
-	char dupt[] = "Hello bruh";
+	char dupt[] = "lorem ipsum dolor sit amet";
 	char *dupt1;
 	dupt1 = strdup(dupt);
 	printf("strdup sys: %s\n", dupt1);
 	char *d2;
-	d2 = strdup(dupt);
+	d2 = ft_strdup(dupt);
 	printf("strdup my: %s\n", d2);
 	
 	//strcpy
@@ -66,7 +66,7 @@ int main()
 	printf("strch sys: %ld\n", (ach - chrstr + 1));
 
 	//ft_atoi
-	char testat[] = "\e475";
+	char testat[] = "\t\n\r\v\f  469 \n";
 	printf("atoi sys: %d\n", atoi(testat));
 	printf("atoi mys: %d\n", ft_atoi(testat));
 
@@ -81,5 +81,18 @@ int main()
 
 	// Вывод массива dst на консоль
 	printf ("dst: %s\n",dst1337);
+
+	//memccpy
+
+	unsigned char memcs[30] = "espkghmsfgkhmdfkghm";
+	unsigned char memcd[30] =  "espkghmsfgkhmdfkghm";
+	unsigned char memcd1[30] = "espkghmsfgkhmdfkghm";
+	ft_memccpy(memcd, memcs, 'f', 20);
+	memccpy(memcd1, &memcs, 'f', 20);
+	printf("memccpy: %s\n", memcd);
+	printf("memccpy: %s\n", memcd1);
+
+	
+	
 	return (0);
 }
