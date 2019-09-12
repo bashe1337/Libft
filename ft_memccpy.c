@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 20:16:08 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/11 20:13:00 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/12 20:03:49 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
+		d[i] = s[i];
 		if (s[i] == (unsigned char)c)
 		{
-			d[i] = s[i];
-			return (d);
+			i++;
+			return (&d[i]);
 		}
-		d[i] = s[i];
 		i++;
 	}
 	return (NULL);

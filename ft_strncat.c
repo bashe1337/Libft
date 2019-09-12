@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 19:19:38 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/11 21:25:26 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/12 19:28:41 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ char	*ft_strncat(char *dst, const char *app, size_t len)
 		i++;
 		j++;
 	}
+	dst[j] = '\0';
 	return (dst);
 }

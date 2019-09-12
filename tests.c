@@ -38,13 +38,13 @@ int main()
 	printf("strcpy my: %s\n", cpydst2);
 	
 	//strncpy
-	/*char cpynsrc[10] = "12345\0006789";
+	char cpynsrc[10] = "123456789";
 	char cpyndst1[10] = "1111111111";
 	char cpyndst2[10] = "1111111111";
 	strncpy(cpyndst1, cpynsrc, 2);
-	printf("strncpy sys: %hu\n", (unsigned short)cpyndst1);
+	printf("strncpy sy: %s\n", cpyndst1);
 	ft_strncpy(cpyndst2, cpynsrc, 2);
-	printf("strncpy my: %hu\n", (unsigned short)cpyndst2);*/
+	printf("strncpy my: %s\n", cpyndst2);
 
 	//strcat
 	char catapp[40] = "First line";

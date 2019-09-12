@@ -6,7 +6,7 @@
 #    By: bashe <bashe@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 15:19:13 by bashe             #+#    #+#              #
-#    Updated: 2019/09/11 20:45:56 by bashe            ###   ########.fr        #
+#    Updated: 2019/09/12 21:40:14 by bashe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,10 @@ SRCS = ft_strlen.c\
 	   ft_memset.c\
 	   ft_memcpy.c\
 	   ft_bzero.c\
-	   ft_memccpy.c
+	   ft_memccpy.c\
+	   ft_memmove.c\
+	   ft_memchr.c\
+	   ft_memcmp.c
 
 SRCSO = ft_strlen.o\
 		ft_strdup.o\
@@ -35,7 +38,10 @@ SRCSO = ft_strlen.o\
 		ft_memset.o\
 		ft_memcpy.o\
 		ft_bzero.o\
-		ft_memccpy.o
+		ft_memccpy.o\
+		ft_memmove.o\
+		ft_memchr.o\
+		ft_memcmp.o
 
 INC = libft.h
 
