@@ -92,7 +92,12 @@ int main()
 	printf("memccpy: %s\n", memcd);
 	printf("memccpy: %s\n", memcd1);
 
-	
+	char *strr;
+	char *strr1;
+  	strr = strnstr("lorem ipsum dolor sit amet", "dolor", 18);
+  	printf("%s\n", strr);
+	strr1 = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 18);
+	printf("%s\n", strr1);
 	
 	return (0);
 }

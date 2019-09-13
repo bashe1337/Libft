@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 18:48:40 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/13 18:30:35 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/13 21:03:08 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/13 21:12:13 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+int		ft_toupper(int c)
 {
-	int			i;
-	char		*str;
-	int			count;
+	unsigned char	toup;
 
-	i = 0;
-	count = ft_strlen(src);
-	str = (char *)malloc(sizeof(char) * (count + 1));
-	if (str == NULL)
-		return (NULL);
-	while (i < count)
-	{
-		str[i] = src[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	toup = (unsigned char)c;
+	if (toup >= 'a' && toup <= 'z')
+		return (c - 32);
+	return (c);
 }

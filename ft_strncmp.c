@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 18:48:40 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/13 18:30:35 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/13 19:39:19 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/13 19:48:47 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+int		ft_strncmp(const char *str1, const char *str2, size_t len)
 {
-	int			i;
-	char		*str;
-	int			count;
+	size_t			i;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
 	i = 0;
-	count = ft_strlen(src);
-	str = (char *)malloc(sizeof(char) * (count + 1));
-	if (str == NULL)
-		return (NULL);
-	while (i < count)
+	s1 = (unsigned char *)str1;
+	s2 = (unsigned char *)str2;
+	while (i < len && (s1[i] || s2[i]))
 	{
-		str[i] = src[i];
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	return (0);
 }

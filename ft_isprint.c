@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 18:48:40 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/13 18:30:35 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/13 20:57:33 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/13 20:59:27 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+int		ft_isprint(int c)
 {
-	int			i;
-	char		*str;
-	int			count;
+	unsigned char	ispr;
 
-	i = 0;
-	count = ft_strlen(src);
-	str = (char *)malloc(sizeof(char) * (count + 1));
-	if (str == NULL)
-		return (NULL);
-	while (i < count)
-	{
-		str[i] = src[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	ispr = (unsigned char)c;
+	if (ispr >= 32 && ispr <= 126)
+		return (1);
+	return (0);
 }
