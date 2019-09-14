@@ -6,7 +6,7 @@
 #    By: bashe <bashe@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 15:19:13 by bashe             #+#    #+#              #
-#    Updated: 2019/09/13 21:14:36 by bashe            ###   ########.fr        #
+#    Updated: 2019/09/14 22:48:39 by bashe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS = 	ft_atoi.c\
 		ft_strstr.c\
 		ft_strncmp.c\
 		ft_strnstr.c\
+		ft_strlcat.c\
 		ft_memset.c\
 		ft_memcpy.c\
 		ft_memccpy.c\
@@ -38,7 +39,11 @@ SRCS = 	ft_atoi.c\
 		ft_isascii.c\
 		ft_isprint.c\
 		ft_toupper.c\
-		ft_tolower.c
+		ft_tolower.c\
+		ft_putchar.c\
+		ft_putstr.c\
+		ft_putendl.c\
+		ft_putnbr.c
 
 SRCSO = ft_atoi.o\
 		libft.h.gch\
@@ -55,6 +60,7 @@ SRCSO = ft_atoi.o\
 		ft_strstr.o\
 		ft_strncmp.o\
 		ft_strnstr.o\
+		ft_strlcat.o\
 		ft_memset.o\
 		ft_memcpy.o\
 		ft_memccpy.o\
@@ -67,7 +73,11 @@ SRCSO = ft_atoi.o\
 		ft_isascii.o\
 		ft_isprint.o\
 		ft_toupper.o\
-		ft_tolower.o
+		ft_tolower.o\
+		ft_putchar.o\
+		ft_putstr.o\
+		ft_putendl.o\
+		ft_putnbr.o
 
 INC = libft.h
 

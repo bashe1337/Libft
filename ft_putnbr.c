@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 19:41:09 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/14 19:10:33 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/14 22:34:46 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/14 23:13:58 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putnbr(int n)
 {
-	unsigned char	*o_dst;
-	unsigned char	*o_src;
-	size_t			i;
+	int		i;
+	char	str[11];
+	int		m;
 
-	o_dst = (unsigned char *)dst;
-	o_src = (unsigned char *)src;
 	i = 0;
-	while (i < n)
+	m = 1;
+	if (n < 0)
+		m = -1;
+	while (n != 0)
 	{
-		o_dst[i] = o_src[i];
+		str[i] = n % 10 + '0';
+		n = n / 10;
 		i++;
 	}
-	return (o_dst);
+	if (m < 0)
+		str[i] = '-';
+	if (i > 1)
+		i = i - 1;
+	while (i >= 0)
+	{
+		ft_putchar(str[i]);
+		i--;
+	}
 }
