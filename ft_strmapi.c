@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/14 22:34:46 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/15 18:47:58 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/15 20:56:57 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/15 21:00:42 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	long int	i;
-	long int	b;
+	unsigned int		i;
+	char				*str;
+	int					len;
 
-	i = 1;
-	b = n;
-	if (n == 0)
-		ft_putchar('0');
-	else if (b < 0)
+	i = 0;
+	if (s && f)
 	{
-		ft_putchar('-');
-		b = b * (-1);
+		len = ft_strlen(s);
+		str = (char *)malloc(sizeof(char) * len + 1);
+		if (str == NULL)
+			return (NULL);
+		while (s[i])
+		{
+			str[i] = (*f)(i, s[i]);
+			i++;
+		}
+		str[i] = '\0';
+		return (str);
 	}
-	n = b;
-	while (n != 0)
-	{
-		n = n / 10;
-		i = i * 10;
-	}
-	while (b != 0)
-	{
-		i = i / 10;
-		n = b / i + '0';
-		b = b % i;
-		ft_putchar(n);
-	}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 21:07:57 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/14 22:48:41 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/15 21:12:26 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,17 @@ int			ft_toupper(int c);
 int			ft_tolower(int c);
 void		ft_putchar(char c);
 void		ft_putstr(char const *s);
-//ft_memalloc
-//ft_memdel
-//ft_strnew
-//ft_strdel
-//ft_strclr
-//ft_striter
-//ft_striteri
-//ft_strmap
-//ft_strmapi
-//ft_strequ
-//ft_strnequ
+void		*ft_memalloc(size_t size);
+void		ft_memdel(void **ap);
+char		*ft_strnew(size_t size);
+void		ft_strdel(char **as);
+void		ft_strclr(char *s);
+void		ft_striter(char *s, void (*f)(char *));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
+char		*ft_strmap(char const *s, char (*f)(char));
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int			ft_strequ(char const *s1, char const *s2);
+int			ft_strnequ(char const *s1, char const *s2, size_t n);
 //ft_strsub
 //ft_strsjoin
 //ft_strtrim

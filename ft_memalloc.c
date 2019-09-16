@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/14 22:34:46 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/15 18:47:58 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/15 18:49:04 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/15 19:08:01 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void	*ft_memalloc(size_t size)
 {
-	long int	i;
-	long int	b;
+	unsigned char	*str;
 
-	i = 1;
-	b = n;
-	if (n == 0)
-		ft_putchar('0');
-	else if (b < 0)
+	str = NULL;
+	if (size > 0)
 	{
-		ft_putchar('-');
-		b = b * (-1);
+		str = (unsigned char *)malloc(size);
+		if (str == NULL)
+			return (NULL);
+		while (size > 0)
+		{
+			str[size] = 0;
+			size--;
+		}
 	}
-	n = b;
-	while (n != 0)
-	{
-		n = n / 10;
-		i = i * 10;
-	}
-	while (b != 0)
-	{
-		i = i / 10;
-		n = b / i + '0';
-		b = b % i;
-		ft_putchar(n);
-	}
+	return ((void *)str);
 }

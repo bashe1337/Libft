@@ -71,13 +71,13 @@ int main()
 	printf("atoi mys: %d\n", ft_atoi(testat));
 
 	//memcpy
-	unsigned char src1337[10]="123456";
+	unsigned char src1337[10]= "";
 	
 	// Массив приемник данных
-	unsigned char dst1337[10]="";
+	unsigned char dst1337[10]= "";
 
 	// Копируем 6 байт из массива src в массив dst
-	memcpy (dst1337, src1337, 6);
+	ft_memcpy (dst1337, src1337, 6);
 
 	// Вывод массива dst на консоль
 	printf ("dst: %s\n",dst1337);
