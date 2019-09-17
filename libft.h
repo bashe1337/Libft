@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 21:07:57 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/17 19:34:14 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/17 20:49:23 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 void		*ft_memset(void *destination, int c, size_t n);
 size_t		ft_strlen(const char *s);
@@ -32,7 +39,7 @@ char		*ft_strdup(const char *src);
 void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memchr(const void *src, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
-//size_t		ft_strlcat(char *dst, const char *src, size_t size);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
 char		*ft_strchr(const char *str, int ch);
 char		*ft_strrchr(const char *str, int c);
 char		*ft_strstr(const char *haystack, const char *needle);
@@ -63,7 +70,7 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s);
 //ft_strsplit
-//ft_itoa
+char		*ft_itoa(int n);
 void		ft_putendl(char const *s);
 void		ft_putnbr(int n);
 void		ft_putchar_fd(char c, int fd);
