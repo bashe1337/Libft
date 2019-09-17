@@ -6,35 +6,44 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 20:03:17 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/16 21:35:46 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/17 18:02:36 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int		ft_iswspace(char a)
+{
+	if (a == '\t' || a == ' ' || a == '\n')
+		return (1);
+	return (0);
+}
+
 char	*ft_strtrim(char const *s)
 {
-	int			i;
-	int			psize;
-	char		*str;
+	int		i;
+	char	*str;
+	int		printsize;
 
 	i = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+	while (ft_iswspace(s[i]) == 1 && s[i] != '\0')
 		i++;
-	psize = i;
-	while (s[psize])
-		psize++;
-	if (psize > 0)
+	printsize = 0;
+	while (s[printsize])
+		printsize++;
+	while (ft_iswspace(s[printsize]) == 1 && printsize >= 0)
+		printsize--;
+	printsize++;
+	printsize = printsize - i + 1;
+	str = (char *)malloc(sizeof(char) * printsize);
+	if (str == NULL)
+		return (NULL);
+	str[printsize] = 0;
+	printsize--;
+	while (printsize >= i)
 	{
-		psize--;
-		while (s[psize] == ' ' || s[psize] == '\n' || s[psize] == '\t'
-		|| psize >= 0)
-			psize--;
-		psize++;
+		str[printsize] = s[printsize];
+		printsize--;
 	}
-	psize = psize - i;
-	str = (char *)malloc(sizeof(char) + psize);
-	str = ft_strncpy(str, &s[i], psize);
-	str[psize] = 0;
 	return (str);
 }
