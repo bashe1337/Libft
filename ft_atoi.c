@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 19:50:56 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/14 22:13:27 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/19 18:06:21 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,9 @@ int		ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	while (str[i])
+	while (str[i] >= 48 && str[i] <= 57)
 	{
-		if (str[i] >= 48 && str[i] <= 57)
-			r = r * 10 + (str[i] - 48);
-		else
-			break ;
+		r = r * 10 + (str[i] - 48);
 		i++;
 	}
 	return (r * m);

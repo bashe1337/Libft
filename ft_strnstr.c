@@ -6,15 +6,15 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 19:33:12 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/13 20:23:48 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/19 18:35:36 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_mycmp(const char *s1, const char *s2)
+int		ft_secondcmp(const char *s1, const char *s2)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (s2[i])
@@ -41,7 +41,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			if ((len - i) < ft_strlen(needle))
 				return (NULL);
-			if (ft_mycmp(&haystack[i], needle) == 0)
+			if (ft_secondcmp(&haystack[i], needle) == 0)
 				return ((char *)&haystack[i]);
 		}
 		i++;
