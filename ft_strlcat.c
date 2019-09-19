@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 19:20:25 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/19 19:04:43 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/19 20:02:07 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	while (dst[j] && j < size)
-		j++;
-	len = j;
+	len = 0;
+	while (dst[len] && len < size)
+		len++;
+	j = ft_strlen(dst);
 	while (src[i] && j < size)
 	{
 		dst[j] = src[i];

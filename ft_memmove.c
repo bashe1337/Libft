@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 20:14:14 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/14 19:38:51 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/19 20:05:39 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,19 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	s = (unsigned char *)src;
 	if (s < d)
 	{
-		while (len-- > 0)
+		while (len > 0)
+		{
+			len--;
 			d[len] = s[len];
+		}
 	}
 	else
 	{
-		while (++i < len)
+		while (i < len)
+		{
 			d[i] = s[i];
+			i++;
+		}
 	}
 	return (d);
 }
