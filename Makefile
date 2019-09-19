@@ -6,7 +6,7 @@
 #    By: bashe <bashe@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 15:19:13 by bashe             #+#    #+#              #
-#    Updated: 2019/09/19 18:07:58 by bashe            ###   ########.fr        #
+#    Updated: 2019/09/19 20:22:31 by bashe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,8 @@ SRCS = 	ft_atoi.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
-		ft_itoa.c
+		ft_itoa.c\
+		ft_strsplit.c
 		
 
 SRCSO = ft_atoi.o\
@@ -116,7 +117,8 @@ SRCSO = ft_atoi.o\
 		ft_putstr_fd.o\
 		ft_putendl_fd.o\
 		ft_putnbr_fd.o\
-		ft_itoa.o
+		ft_itoa.o\
+		ft_strsplit.o
 		
 
 INC = libft.h
