@@ -14,9 +14,9 @@ int main()
 
 	//strlen
 	
-	char strlentest[] = "Hello World!";
-	printf("strlen sys: %lu\n", strlen(strlentest));
-	printf("strlen my: %lu\n", ft_strlen(strlentest));
+	char strlentest[] = "dsd";
+	printf("strlen sys: %lu\n", strlen(""));
+	printf("strlen my: %lu\n", ft_strlen(""));
 
 	//strdup
 	
@@ -66,7 +66,7 @@ int main()
 	printf("strch sys: %ld\n", (ach - chrstr + 1));
 
 	//ft_atoi
-	char testat[] = "9223372036854775808";
+	char testat[] = "9223372036854775809";
 	printf("atoi sys: %d\n", atoi(testat));
 	printf("atoi mys: %d\n", ft_atoi(testat));
 

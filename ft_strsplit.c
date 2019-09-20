@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 19:07:32 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/19 21:11:28 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/20 19:17:28 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		ft_wordcounter(char const *s, char c)
 	return (n);
 }
 
-int		ft_wordlen(char const *s, char c)
+int		ft_wl(char const *s, char c)
 {
 	int		i;
 	int		n;
@@ -57,35 +57,29 @@ char	**ft_strsplit(char const *s, char c)
 {
 	char	**str;
 	int		i;
-	int		first;
-	int		second;
+	int		a;
+	int		b;
 
 	i = 0;
-	first = 0;
-	second = 0;
-	str = (char **)malloc(sizeof(char) * ft_wordcounter(s, c) + 1);
-	if (!s || str == NULL)
+	a = 0;
+	b = 0;
+	if (!(str = (char **)malloc(sizeof(char) * ft_wordcounter(s, c) + 1)))
 		return (NULL);
-	while (i < ft_wordcounter(s, c))
+	while (a < ft_wordcounter(s, c) || s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c && s[i])
 			i++;
 		else
 		{
-			second = 0;
-			*str = (char *)malloc(sizeof(char) * ft_wordlen(&s[i], c) + 1);
-			if (str == NULL)
+			b = 0;
+			if (!(str[a] = (char *)malloc(sizeof(char) * ft_wl(&s[i], c) + 1)))
 				return (NULL);
-			while (second < ft_wordlen(&s[i], c))
-			{
-				str[first][second] = s[i];
-				i++;
-				second++;
-			}
-			str[first][second] = '\0';
-			first++;
+			while (s[i] && s[i] != c)
+				str[a][b++] = s[i++];
+			str[a][b] = '\0';
+			a++;
 		}
 	}
-	str[first] = NULL;
+	str[a] = 0;
 	return (str);
 }
