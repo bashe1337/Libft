@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 20:57:33 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/13 20:59:27 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 19:50:18 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 int		ft_isprint(int c)
 {
-	unsigned char	ispr;
-
-	ispr = (unsigned char)c;
-	if (ispr >= 32 && ispr <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }

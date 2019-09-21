@@ -1,5 +1,6 @@
 #include "libft.h"
 #include <stdio.h>
+#include <ctype.h>
 
 int main()
 {
@@ -15,8 +16,8 @@ int main()
 	//strlen
 	
 	char strlentest[] = "dsd";
-	printf("strlen sys: %lu\n", strlen(""));
-	printf("strlen my: %lu\n", ft_strlen(""));
+	printf("strlen sys: %lu\n", strlen("dsd");
+	printf("strlen my: %lu\n", ft_strlen("dsd");
 
 	//strdup
 	
@@ -66,7 +67,7 @@ int main()
 	printf("strch sys: %ld\n", (ach - chrstr + 1));
 
 	//ft_atoi
-	char testat[] = "9223372036854775809";
+	char testat[] = "214748364966";
 	printf("atoi sys: %d\n", atoi(testat));
 	printf("atoi mys: %d\n", ft_atoi(testat));
 
@@ -77,7 +78,7 @@ int main()
 	unsigned char dst1337[10]= "";
 
 	// Копируем 6 байт из массива src в массив dst
-	ft_memcpy (dst1337, src1337, 6);
+	ft_memcpy(((void *)0), ((void *)0), 3);
 
 	// Вывод массива dst на консоль
 	printf ("dst: %s\n",dst1337);
@@ -98,6 +99,7 @@ int main()
   	printf("%s\n", strr);
 	strr1 = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 18);
 	printf("%s\n", strr1);
+
 	
 	return (0);
 }

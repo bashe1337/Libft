@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 19:21:51 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/16 19:46:23 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 20:25:49 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,15 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	str = (char *)malloc(len + 1);
 	if (str == NULL)
 		return (NULL);
-	while (i < len)
+	if (s)
 	{
-		str[i] = s[start];
-		start++;
-		i++;
+		while (i < len)
+		{
+			str[i] = s[start];
+			start++;
+			i++;
+		}
 	}
-	str[start] = 0;
+	str[len] = 0;
 	return (str);
 }

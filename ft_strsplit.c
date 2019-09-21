@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 19:07:32 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/20 19:17:28 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 17:57:10 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,20 +65,17 @@ char	**ft_strsplit(char const *s, char c)
 	b = 0;
 	if (!(str = (char **)malloc(sizeof(char) * ft_wordcounter(s, c) + 1)))
 		return (NULL);
-	while (a < ft_wordcounter(s, c) || s[i])
+	while (a < ft_wordcounter(s, c))
 	{
-		if (s[i] == c && s[i])
+		while (s[i] == c && s[i])
 			i++;
-		else
-		{
-			b = 0;
-			if (!(str[a] = (char *)malloc(sizeof(char) * ft_wl(&s[i], c) + 1)))
-				return (NULL);
-			while (s[i] && s[i] != c)
-				str[a][b++] = s[i++];
-			str[a][b] = '\0';
-			a++;
-		}
+		if (!(str[a] = (char *)malloc(sizeof(char) * ft_wl(&s[i], c) + 1)))
+			return (NULL);
+		b = 0;
+		while (s[i] && s[i] != c)
+			str[a][b++] = s[i++];
+		str[a][b] = '\0';
+		a++;
 	}
 	str[a] = 0;
 	return (str);

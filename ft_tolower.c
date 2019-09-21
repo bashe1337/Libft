@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 21:12:52 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/13 21:14:09 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 19:55:29 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int		ft_tolower(int c)
 {
-	unsigned char	toup;
-
-	toup = (unsigned char)c;
-	if (toup >= 'A' && toup <= 'Z')
+	if (c >= 65 && c <= 90)
 		return (c + 32);
 	return (c);
 }

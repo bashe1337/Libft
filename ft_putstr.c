@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 22:23:04 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/14 22:25:01 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 21:43:10 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr(char const *s)
 	int	i;
 
 	i = 0;
-	while (s[i])
+	if (s)
 	{
-		ft_putchar(s[i]);
-		i++;
+		while (s[i])
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
 	}
 }

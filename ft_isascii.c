@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 20:53:18 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/13 20:56:08 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 19:48:04 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 int		ft_isascii(int c)
 {
-	unsigned char	as;
-
-	as = (unsigned char)c;
-	if (as >= 0 && as <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }

@@ -6,7 +6,7 @@
 #    By: bashe <bashe@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 15:19:13 by bashe             #+#    #+#              #
-#    Updated: 2019/09/20 20:38:15 by bashe            ###   ########.fr        #
+#    Updated: 2019/09/21 18:20:32 by bashe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,8 @@ SRCS = 	ft_atoi.c\
 		ft_strrchr.c\
 		ft_strcmp.c\
 		ft_strstr.c\
-		ft_strncmp.c\
 		ft_strnstr.c\
+		ft_strncmp.c\
 		ft_strlcat.c\
 		ft_memset.c\
 		ft_memcpy.c\
@@ -68,7 +68,8 @@ SRCS = 	ft_atoi.c\
 		ft_lstdelone.c\
 		ft_lstdel.c\
 		ft_lstadd.c\
-		ft_lstiter.c
+		ft_lstiter.c\
+		ft_secondcmp.c
 		
 
 SRCSO = ft_atoi.o\
@@ -83,8 +84,8 @@ SRCSO = ft_atoi.o\
 		ft_strchr.o\
 		ft_strrchr.o\
 		ft_strcmp.o\
-		ft_strstr.o\
 		ft_strncmp.o\
+		ft_strstr.o\
 		ft_strnstr.o\
 		ft_strlcat.o\
 		ft_memset.o\
@@ -128,7 +129,8 @@ SRCSO = ft_atoi.o\
 		ft_lstdelone.o\
 		ft_lstdel.o\
 		ft_lstadd.o\
-		ft_lstiter.o
+		ft_lstiter.o\
+		ft_secondcmp.o
 		
 
 INC = libft.h

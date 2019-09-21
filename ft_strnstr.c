@@ -6,25 +6,11 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 19:33:12 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/19 18:35:36 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 18:19:31 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_secondcmp(const char *s1, const char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s2[i])
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
-}
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

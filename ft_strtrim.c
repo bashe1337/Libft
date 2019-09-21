@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 20:03:17 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/17 19:01:50 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 21:41:32 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int		ft_iswspace(char const a)
 	return (0);
 }
 
-int		ft_printsize(char const *s)
+size_t		ft_printsize(char const *s)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
 	while (s[i + 1])
@@ -40,16 +40,22 @@ char	*ft_strtrim(char const *s)
 
 	i = 0;
 	j = 0;
-	while (ft_iswspace(s[i]) && s[i] != '\0')
-		i++;
-	printsize = ft_printsize(&s[i]);
-	str = (char *)malloc(sizeof(char) * printsize + 1);
-	while (j <= printsize)
+	str = 0;
+	if (s)
 	{
-		str[j] = s[i];
-		i++;
-		j++;
+		while (ft_iswspace(s[i]) && s[i] != '\0')
+			i++;
+		printsize = ft_printsize(&s[i]);
+		str = (char *)malloc(sizeof(char) * (printsize + 2));
+		if (str == NULL)
+			return (NULL);
+		while (j <= printsize)
+		{
+			str[j] = s[i];
+			i++;
+			j++;
+		}
+		str[j] = 0;
 	}
-	str[j] = 0;
 	return (str);
 }

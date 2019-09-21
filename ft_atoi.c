@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 19:50:56 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/20 20:58:40 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 19:43:50 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	int		i;
-	int		r;
-	int		m;
+	int					i;
+	long long int		r;
+	int					m;
 
 	i = 0;
 	r = 0;
