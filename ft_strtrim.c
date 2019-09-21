@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 20:03:17 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/21 21:41:32 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/21 21:50:54 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int		ft_iswspace(char const a)
 	return (0);
 }
 
-size_t		ft_printsize(char const *s)
+size_t	ft_printsize(char const *s)
 {
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	while (s[i + 1])
