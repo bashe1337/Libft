@@ -54,14 +54,14 @@ char	**ft_strsplit(char const *s, char c)
 	a = 0;
 	b = 0;
 	str = (char **)malloc(sizeof(char *) * ft_wordcounter(s, c) + 1);
-	if (str == NULL || !s || !c)
+	if (str == NULL || !s)
 		return (NULL);
 	while (a < ft_wordcounter(s, c))
 	{
 		b = 0;
 		while (s[i] == c && s[i])
 			i++;
-		if (!(str[a] = (char *)malloc(sizeof(char) * ft_wl(&s[i], c) + 1)))
+		if (!(str[a] = (char *)malloc(sizeof(char *) * ft_wl(&s[i], c) + 1)))
 			return (NULL);
 		while (s[i] != c && s[i])
 			str[a][b++] = s[i++];
