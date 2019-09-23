@@ -15,9 +15,7 @@ int main()
 
 	//strlen
 	
-	char strlentest[] = "dsd";
-	printf("strlen sys: %lu\n", strlen("dsd");
-	printf("strlen my: %lu\n", ft_strlen("dsd");
+
 
 	//strdup
 	
@@ -67,7 +65,7 @@ int main()
 	printf("strch sys: %ld\n", (ach - chrstr + 1));
 
 	//ft_atoi
-	char testat[] = "214748364966";
+	char testat[] = "-248524528529852820902342903249";
 	printf("atoi sys: %d\n", atoi(testat));
 	printf("atoi mys: %d\n", ft_atoi(testat));
 
@@ -100,6 +98,7 @@ int main()
 	strr1 = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 18);
 	printf("%s\n", strr1);
 
+	printf("sqr %d", ft_sqr(2, 10));
 	
 	return (0);
 }

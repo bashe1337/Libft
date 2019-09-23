@@ -6,7 +6,7 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 20:50:02 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/20 19:37:01 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/23 19:52:02 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*list;
 
-	list = (t_list *)malloc(content_size);
+	list = (t_list *)malloc(sizeof(t_list));
 	if (list == NULL)
 		return (NULL);
 	if (content == NULL)

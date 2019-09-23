@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_printsize.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 21:51:08 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/23 18:23:20 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/23 18:28:41 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/23 18:28:44 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+size_t	ft_printsize(char const *s)
 {
-	int			i;
-	char		*str;
-	int			count;
+	size_t	i;
 
 	i = 0;
-	count = ft_sizencount(n);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	str = (char *)malloc(sizeof(char) * count + 1);
-	if (str == NULL)
-		return (NULL);
-	str[count] = 0;
-	if (n < 0)
-	{
-		str[0] = '-';
-		i = 1;
-		n = n * (-1);
-	}
-	while (count > i)
-	{
-		count--;
-		str[count] = n % 10 + '0';
-		n = n / 10;
-	}
-	return (str);
+	while (s[i + 1])
+		i++;
+	while (ft_iswspace(s[i]) && i > 0)
+		i--;
+	return (i);
 }

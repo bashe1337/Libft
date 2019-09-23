@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_sqr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 21:51:08 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/23 18:23:20 by bashe            ###   ########.fr       */
+/*   Created: 2019/09/22 18:55:58 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/22 19:40:48 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+int		ft_sqr(int nb, int power)
 {
-	int			i;
-	char		*str;
-	int			count;
+	int	a;
 
-	i = 0;
-	count = ft_sizencount(n);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	str = (char *)malloc(sizeof(char) * count + 1);
-	if (str == NULL)
-		return (NULL);
-	str[count] = 0;
-	if (n < 0)
+	a = 1;
+	if (power <= 0)
+		return (1);
+	while (power > 0)
 	{
-		str[0] = '-';
-		i = 1;
-		n = n * (-1);
+		a = a * nb;
+		power--;
 	}
-	while (count > i)
-	{
-		count--;
-		str[count] = n % 10 + '0';
-		n = n / 10;
-	}
-	return (str);
+	return (a);
 }

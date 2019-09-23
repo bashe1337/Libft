@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 21:51:08 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/23 18:23:20 by bashe            ###   ########.fr       */
+/*   Created: 2019/08/03 17:47:55 by bashe             #+#    #+#             */
+/*   Updated: 2019/09/22 18:49:43 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+int	ft_sqrt(int nb)
 {
-	int			i;
-	char		*str;
-	int			count;
+	int i;
 
-	i = 0;
-	count = ft_sizencount(n);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	str = (char *)malloc(sizeof(char) * count + 1);
-	if (str == NULL)
-		return (NULL);
-	str[count] = 0;
-	if (n < 0)
+	i = 1;
+	while ((i * i) <= nb)
 	{
-		str[0] = '-';
-		i = 1;
-		n = n * (-1);
+		i++;
 	}
-	while (count > i)
+	if (((i - 1) * (i - 1)) == nb)
 	{
-		count--;
-		str[count] = n % 10 + '0';
-		n = n / 10;
+		return (i - 1);
 	}
-	return (str);
+	else
+	{
+		return (0);
+	}
 }

@@ -6,7 +6,7 @@
 #    By: bashe <bashe@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 15:19:13 by bashe             #+#    #+#              #
-#    Updated: 2019/09/21 18:20:32 by bashe            ###   ########.fr        #
+#    Updated: 2019/09/23 20:01:57 by bashe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,16 @@ SRCS = 	ft_atoi.c\
 		ft_lstdel.c\
 		ft_lstadd.c\
 		ft_lstiter.c\
-		ft_secondcmp.c
+		ft_secondcmp.c\
+		ft_sqr.c\
+		ft_factorial.c\
+		ft_sqrt.c\
+		ft_lstmap.c\
+		ft_sizencount.c\
+		ft_wordcounter.c\
+		ft_wl.c\
+		ft_iswspace.c\
+		ft_printsize.c
 		
 
 SRCSO = ft_atoi.o\
@@ -130,7 +139,16 @@ SRCSO = ft_atoi.o\
 		ft_lstdel.o\
 		ft_lstadd.o\
 		ft_lstiter.o\
-		ft_secondcmp.o
+		ft_secondcmp.o\
+		ft_sqr.o\
+		ft_factorial.o\
+		ft_sqrt.o\
+		ft_lstmap.o\
+		ft_sizencount.o\
+		ft_wordcounter.o\
+		ft_wl.o\
+		ft_iswspace.o\
+		ft_printsize.o
 		
 
 INC = libft.h

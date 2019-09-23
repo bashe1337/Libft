@@ -6,30 +6,11 @@
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 20:03:17 by bashe             #+#    #+#             */
-/*   Updated: 2019/09/21 21:50:54 by bashe            ###   ########.fr       */
+/*   Updated: 2019/09/23 18:28:29 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_iswspace(char const a)
-{
-	if (a == '\t' || a == ' ' || a == '\n')
-		return (1);
-	return (0);
-}
-
-size_t	ft_printsize(char const *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i + 1])
-		i++;
-	while (ft_iswspace(s[i]) && i > 0)
-		i--;
-	return (i);
-}
 
 char	*ft_strtrim(char const *s)
 {
