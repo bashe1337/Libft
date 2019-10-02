@@ -23,7 +23,7 @@ char	**ft_strsplit(char const *s, char c)
 	a = 0;
 	b = 0;
 	if (!s || !c ||
-	!(str = (char **)malloc(sizeof(char *) * ft_wordcounter(s, c) + 1)))
+	!(str = (char **)malloc(sizeof(char *) * (ft_wordcounter(s, c) + 1))))
 		return (NULL);
 	while (a < ft_wordcounter(s, c))
 	{

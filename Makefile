@@ -6,7 +6,7 @@
 #    By: bashe <bashe@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 15:19:13 by bashe             #+#    #+#              #
-#    Updated: 2019/09/23 20:01:57 by bashe            ###   ########.fr        #
+#    Updated: 2019/09/26 16:12:51 by bashe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,7 +82,6 @@ SRCS = 	ft_atoi.c\
 		
 
 SRCSO = ft_atoi.o\
-		libft.h.gch\
 		ft_bzero.o\
 		ft_strlen.o\
 		ft_strdup.o\
@@ -148,22 +147,26 @@ SRCSO = ft_atoi.o\
 		ft_wordcounter.o\
 		ft_wl.o\
 		ft_iswspace.o\
-		ft_printsize.o
+		ft_printsize.o\
 		
 
 INC = libft.h
 
-FLAGS = -c -Wall -Wextra -Werror
+DELONE = libft.h.gch
+
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
+	
+$(NAME): $(SRCSO)
+	ar rc $(NAME) $(SRCSO)
+	ranlib $(NAME)
 
-$(NAME):	
-	@gcc $(FLAGS) $(SRCS) $(INC)
-	@ar rc $(NAME) $(SRCSO)
-	@ranlib $(NAME)
+%.o: %.c
+	gcc $(FLAGS) -c $(SRCS) $(INC)
 
 clean:
-	@/bin/rm -f $(SRCSO)
+	@/bin/rm -f $(SRCSO) $(DELONE)
 
 fclean: clean
 	@/bin/rm -f $(NAME)
