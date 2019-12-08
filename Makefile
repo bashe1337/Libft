@@ -6,7 +6,7 @@
 #    By: bashe <bashe@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 15:19:13 by bashe             #+#    #+#              #
-#    Updated: 2019/09/26 16:12:51 by bashe            ###   ########.fr        #
+#    Updated: 2019/12/08 18:30:21 by bashe            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,9 @@ SRCS = 	ft_atoi.c\
 		ft_wordcounter.c\
 		ft_wl.c\
 		ft_iswspace.c\
-		ft_printsize.c
+		ft_printsize.c\
+		get_next_line.c\
+		ft_strjoinfree.c
 		
 
 SRCSO = ft_atoi.o\
@@ -148,6 +150,8 @@ SRCSO = ft_atoi.o\
 		ft_wl.o\
 		ft_iswspace.o\
 		ft_printsize.o\
+		get_next_line.o\
+		ft_strjoinfree.o
 		
 
 INC = libft.h

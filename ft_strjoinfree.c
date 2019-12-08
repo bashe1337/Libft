@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_strjoinfree.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bashe <bashe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/22 20:47:00 by bashe             #+#    #+#             */
-/*   Updated: 2019/11/22 21:02:26 by bashe            ###   ########.fr       */
+/*   Created: 2019/12/08 18:10:36 by bashe             #+#    #+#             */
+/*   Updated: 2019/12/08 18:29:11 by bashe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int		ft_sqrt(int a)
+char	*ft_strjoinfree(char const *s1, char const *s2, char *str)
 {
-	float	x;
-	int	i;
+	char	*tmp;
 
-	x = 1.0;
-	i = 0;
-	while (x * x < a)
-		x *= 10;
-	while (i < 10)
-	{
-		x = x + a / x;
-		x = x / 2;
-		i++;
-	}
-	return (x);
+	tmp = str;
+	str = ft_strjoin(s1, s2);
+	ft_strdel(&tmp);
+	return (str);
 }
